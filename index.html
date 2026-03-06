@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mini CRM Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="header">
+<h1>Client Lead Management System</h1>
+<p>Mini CRM Dashboard</p>
+<button onclick="toggleDark()">🌙 Dark Mode</button>
+</div>
+
+<div class="container">
+
+<div class="stats">
+
+<div class="stat blue">
+<h2 id="total">0</h2>
+<p>Total Leads</p>
+</div>
+
+<div class="stat orange">
+<h2 id="contacted">0</h2>
+<p>Contacted</p>
+</div>
+
+<div class="stat green">
+<h2 id="converted">0</h2>
+<p>Converted</p>
+</div>
+
+</div>
+
+<div class="card">
+
+<h3>Add New Lead</h3>
+
+<input type="text" id="name" placeholder="Client Name">
+<input type="email" id="email" placeholder="Email">
+<input type="text" id="source" placeholder="Source">
+
+<button onclick="addLead()">Add Lead</button>
+
+</div>
+
+<div class="card">
+
+<div class="table-header">
+<input type="text" id="search" placeholder="Search lead..." onkeyup="searchLead()">
+<button onclick="exportCSV()">Download CSV</button>
+</div>
+
+<table>
+
+<thead>
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Source</th>
+<th>Status</th>
+<th>Notes</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody id="leadTable"></tbody>
+
+</table>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
